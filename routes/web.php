@@ -16,4 +16,4 @@ Route::post('/tweet', App\Http\Controllers\Tweet\CreateController::class)
 Route::get('/tweet/{tweetId}', \App\Http\Controllers\Tweet\Update\IndexController::class)
     ->name('tweet.update.index');
 Route::put('/tweet/{tweetId}', \App\Http\Controllers\Tweet\Update\PutController::class)
-    ->name('tweet.update.[put');
+    ->name('tweet.update.put');

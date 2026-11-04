@@ -15,7 +15,7 @@ class IndexController extends Controller
     public function __invoke(Request $request)
     {
         $tweetId = (int) $request->route('tweetId');
-        $tweet = Tweet::query()->where('id',$tweetId)->firstOrFail();
+        $tweet = Tweet::query()->where('id', $tweetId)->firstOrFail();
         return view('tweet.update')->with('tweet', $tweet);
     }
 }
