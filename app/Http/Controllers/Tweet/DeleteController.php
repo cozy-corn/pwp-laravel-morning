@@ -18,7 +18,7 @@ class DeleteController extends Controller
         $tweet->delete();
 
         return redirect()
-            ->route('tweet.index', ['tweetId' => $tweet->id])
+            ->route('tweet.index')
             ->with('feedback.success', "つぶやきを削除しました");
     }
 }
