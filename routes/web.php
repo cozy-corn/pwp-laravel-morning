@@ -19,3 +19,9 @@ Route::put('/tweet/{tweetId}', \App\Http\Controllers\Tweet\Update\PutController:
     ->name('tweet.update.put');
 Route::delete('/tweet/{tweetId}', \App\Http\Controllers\Tweet\DeleteController::class)
     ->name('tweet.delete');
+
+Route::get('/register', \App\Http\Controllers\Auth\Register\IndexController::class)
+    ->name('register');
+Route::post('/register', \App\Http\Controllers\Auth\Register\PostController::class);
+//Route::get('/login', \App\Http\Controllers\Auth\Login\IndexController::class)
+//    ->name('login');
