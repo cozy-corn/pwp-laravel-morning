@@ -6,7 +6,15 @@
     <title>つぶやきアプリ</title>
 </head>
 <body>
-    <h1>つぶやきアプリ</h1>
+    <header>
+        <h1>つぶやきアプリ</h1>
+        @auth
+            <form action="{{ route('logout') }}" method="post" style="display: inline;">
+                @csrf
+                <button type="submit">ログアウト</button>
+            </form>
+        @endauth
+    </header>
     <div>
         <p>投稿フォーム</p>
         @if (session('feedback.success'))
