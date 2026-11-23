@@ -57,6 +57,9 @@
             <button type="submit">登録</button>
         </div>
       </form>
+      <p>
+        <a href="{{ route('register') }}">アカウントをお持ちでない方はこちら</a>
+      </p>
     </main>
 </body>
 </html>
