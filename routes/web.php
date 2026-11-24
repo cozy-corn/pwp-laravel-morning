@@ -30,4 +30,11 @@ Route::get('/tweet', App\Http\Controllers\Tweet\IndexController::class)
 Route::middleware('auth')->group(function () {
 Route::post('/tweet', App\Http\Controllers\Tweet\CreateController::class)
     ->name('tweet.create');
+
+Route::get('/tweet/{tweetId}', \App\Http\Controllers\Tweet\Update\IndexController::class)
+        ->name('tweet.update.index');
+    Route::put('/tweet/{tweetId}', \App\Http\Controllers\Tweet\Update\PutController::class)
+        ->name('tweet.update.put');
+    Route::delete('/tweet/{tweetId}', \App\Http\Controllers\Tweet\DeleteController::class)
+        ->name('tweet.delete');
 });
